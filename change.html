@@ -1,0 +1,22 @@
+  <script>
+        var links = ["vehicle.php?value=HONDA CITY","vehicle.php?value=AUDI A3","brands.php?bname=4"];
+        var images = ["images/city.jpg","images/a3.jpg","images/BMW.jpg"];
+        var i = 0;
+        var renew = setInterval(function(){
+            if(links.length == i){
+                i = 0;
+            }
+            else {
+            document.getElementById("bannerImage").src = images[i]; 
+            document.getElementById("bannerLink").href = links[i]; 
+            i++;
+
+        }
+        },40000);
+        </script>
+
+
+
+<a id="bannerLink" href="vehicle.php?value=HONDA CITY" onclick="void window.open(this.href); return false;">
+<img id="bannerImage" src="images/city.jpg" width="694" height="83" alt="some text">
+</a>
